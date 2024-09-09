@@ -1,0 +1,64 @@
+.ThemeToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    position: absolute;
+    right: -45%;
+    top: 50%;
+    z-index: 9999;
+    transform: translateY(-50%);
+}
+
+.ThemeToggle:hover .sun {
+    scale: 1.2;
+    rotate: 55deg;
+    transition: all 0.6s ease-in-out;
+}
+
+.ThemeToggle:hover .moon {
+    scale: 1.2;
+    transition: all 0.6s ease-in-out;
+}
+  
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transition: opacity var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.icon svg {
+    scale: 1;
+    rotate: 0;
+    width: 24px;
+    height: 24px;
+    fill: var(--color-secondary);
+    transition: all 0.6s ease-in-out;
+    filter: blur(0.5px) drop-shadow(0 0 2px var(--color-secondary));
+}
+
+.customHam {
+    position: relative;
+    z-index: 9999;
+    right: auto;
+    top: auto;
+    transform: none;
+    scale: 2;
+}
+
+.customHam svg {
+    fill: var(--color-primary-light);
+    filter: blur(0.5px) drop-shadow(0 0 2px var(--color-primary-light));
+}
+
+@media (max-width: 650px) {
+    .ThemeToggle {
+        display: none;
+    }
+}

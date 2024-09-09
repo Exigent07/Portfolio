@@ -1,0 +1,307 @@
+.Home {
+  background-color: var(--color-primary-dark);
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  user-select: none;
+  -moz-user-select: none;
+}
+
+#mainWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.mainHero {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.secDiv, .devDiv {
+  position: relative;
+  border: 1px solid var(--color-primary-light);
+  border-left: none;
+  border-right: none;
+  height: clamp(80px, 10vw + 50px, 110px);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.secDiv h2, .devDiv h2 {
+  cursor: pointer;
+  color: var(--color-primary-light);
+  font-family: var(--font-secondary);
+  padding: 0 clamp(2rem, 5vw, 7rem);
+  font-size: clamp(60px, 8vw, 110px);
+  margin: 0;
+}
+
+.gearIcon {
+  position: absolute;
+  z-index: 100;
+  filter: blur(1px) drop-shadow(0 0 4px var(--color-primary-light));
+  width: clamp(200px, 25vw, 500px);
+  height: auto;
+  fill: var(--color-primary-light);
+  margin: clamp(10px, 2vw, 20px);
+}
+
+.bottomContainer {
+  height: 100vh;
+  width: 100vw;
+}
+
+.helloHero {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.dummyDiv {
+  position: relative;
+  width: clamp(250px, 25vw, 500px);
+  height: clamp(250px, 25vw, 500px);
+  margin: clamp(10px, 5vw, 20px);
+}
+
+.whoAmI {
+  border: 2px solid var(--color-primary-light);
+  border-left: none;
+  border-right: none;
+  height: clamp(55px, 6vw, 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0rem;
+  opacity: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.whoContainer {
+  filter: blur(1px);
+  height: clamp(85px, 8vw, 120px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  z-index: 99;
+  align-items: center;
+  justify-content: center;
+}
+
+.whoAmI h2 {
+  cursor: pointer;
+  color: var(--color-primary-light);
+  font-family: var(--font-secondary);
+  padding: 0 clamp(2.1rem, 5vw, 8rem);
+  font-size: clamp(55px, 6vw, 110px);
+  margin: 0;
+}
+
+.myName {
+  opacity: 0;
+  bottom: -40%;
+  position: absolute;
+  color: var(--color-primary-light);
+  font-family: var(--font-secondary);
+  font-size: clamp(22px, 3vw, 38px);
+}
+
+.secPage, .devPage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: var(--color-primary-light);
+}
+
+.gearIconSec, .gearIconDev {
+  scale: 1.3;
+  position: relative;
+  z-index: 100;
+  filter: blur(1px) drop-shadow(0 0 4px var(--color-primary-light));
+  width: clamp(250px, 25vw, 500px);
+  height: auto;
+  fill: var(--color-primary-light);
+  margin: clamp(10px, 2vw, 20px);
+}
+
+.secPageHeading, .devPageHeading {
+  position: relative;
+  font-size: clamp(95px, 10vw + 40px, 160px);
+}
+
+.secLeft, .devLeft {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.secLinks, .devLinks {
+  cursor: pointer;
+  margin-top: 4rem;
+  filter: none;
+  transition: filter 0.3s ease-in-out;
+}
+
+.secLinks div:hover, .devLinks div:hover {
+  filter: blur(1px) drop-shadow(0 0 4px var(--color-primary-light));
+}
+
+.secLinks div:first-child, .devLinks div:first-child {
+  border-top: 1px solid var(--color-primary-light);
+}
+
+.secLinks div .number, .devLinks div .number {
+  font-family: var(--font-primary);
+  padding-right: 30%;
+}
+
+.secLinks div, .devLinks div {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  width: clamp(480px, 30vw + 150px, 750px) !important;
+  text-wrap: nowrap;
+  font-family: var(--font-secondary);
+  display: flex;
+  align-items: center;
+  height: clamp(75px, 10vw + 50px, 105px);
+  border-bottom: 1px solid var(--color-primary-light);
+  font-size: clamp(25px, 8vw, 55px);
+  padding-right: 30%;
+}
+
+.devPageHeading {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-primary-light);
+}
+
+.devLinks div {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--color-primary-light);
+}
+
+.activeSecIcon {
+  filter: blur(1px) drop-shadow(0 0 4px var(--color-primary-light));
+  color: var(--color-primary-light) !important;
+  position: absolute;
+  left: 73.5%;
+  width: 150px;
+  height: 150px;
+  fill: var(--color-primary-light) !important;
+}
+
+.activeDevIcon {
+  filter: blur(1px) drop-shadow(0 0 4px var(--color-primary-light));
+  color: var(--color-primary-light) !important;
+  right: 73.5%;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  fill: var(--color-primary-light) !important;
+}
+
+.activeSecIcon path {
+  color: var(--color-primary-light) !important;
+  fill: var(--color-primary-light) !important;
+}
+
+.activeDevIcon path {
+  color: var(--color-primary-light) !important;
+  fill: var(--color-primary-light) !important;
+}
+
+/* Small phones */
+@media (max-width: 599px) {
+  .mainNameDev::after {
+    width: 60vw;
+    right: 13%;
+    height: 1.5px;
+    bottom: 15%;
+  }
+
+  .activeDevIcon {
+    display: none;
+  }
+
+  .activeSecIcon {
+    display: none;
+  }
+
+  .mainHero  {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .gearIconDev, .gearIconSec {
+    display: none;
+  }
+}
+
+/* landscape phones */
+@media (min-width: 600px) and (max-width: 899px) {
+  .mainNameDev::after {
+    width: 70vw;
+    right: 7%;
+    bottom: 15%;
+    height: 2px;
+  }
+
+  .activeDevIcon {
+    display: none;
+  }
+
+  .activeSecIcon {
+    display: none;
+  }
+
+  .gearIconDev, .gearIconSec {
+    display: none;
+  }
+}
+
+/* tablets */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .mainNameDev::after {
+    width: 70vw;
+    right: 5%;
+  }
+}
+
+/* desktops */
+@media (min-width: 1200px) {
+  .mainNameDev::after {
+    width: 77vw;
+    bottom: 15%;
+    right: 3%;
+  }
+}
+
+/* large desktops */
+@media (min-width: 1600px) {
+  .mainNameDev::after {
+    width: 80vw;
+  }
+}

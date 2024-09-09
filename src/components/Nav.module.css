@@ -1,0 +1,137 @@
+.Nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    mix-blend-mode: difference;
+    background-color: transparent;
+    top: 0;
+    left: 50%;
+    width: clamp(25vw, 50vw, 90vw);
+    transform: translateX(-50%);
+    padding: 1rem 0;
+    z-index: 9999 !important;
+}
+
+.navLinks {
+    z-index: 99;
+    mix-blend-mode: difference;
+    cursor: pointer;
+    font-size: clamp(25px, 50dvh, 36px);
+    color: var(--color-secondary);
+    font-family: var(--font-primary);
+    font-weight: 300;
+    position: relative;
+}
+
+.navLinks::after {
+    mix-blend-mode: difference;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent);
+    transition: width 0.3s ease;
+}
+
+.navLinks:hover::after,
+.navLinks.active::after {
+    width: 100%;
+}
+
+.hamburger {
+    z-index: 101;
+    cursor: pointer;
+    mix-blend-mode: difference;
+    position: fixed;
+    top: 0;
+    right: -50%;
+    display: none;
+    align-items: center;
+    mix-blend-mode: difference;
+    justify-content: center;
+}
+
+.hamIcon {
+    position: relative;
+    mix-blend-mode: difference;
+    z-index: 100;
+    filter: drop-shadow(0 0 4px var(--color-secondary));
+    width: clamp(65px, 50vw, 85px);
+    height: auto;
+    fill: var(--color-secondary);
+    margin: clamp(10px, 2vw, 20px);
+}
+
+.hamText {
+    color: var(--color-secondary);
+    text-align: center;
+    mix-blend-mode: difference;
+    position: relative;
+    z-index: 100;
+    position: fixed;
+    font-size: clamp(30px, 25vw, 45px);
+}
+
+.hamPage {
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--color-primary-dark);
+    flex-direction: column;
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    mix-blend-mode: normal;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hamLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary-light);
+    font-family: var(--font-secondary);
+    font-size: clamp(90px, 8vw, 150px);
+}
+
+.links h3:first-child {
+    border-top: 1px solid var(--color-primary-light);
+}
+
+.links h3 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    cursor: pointer;
+    display: flex;
+    color: var(--color-primary-light);
+    align-items: center;
+    justify-content: center;
+    width: 450% !important;
+    font-family: var(--font-secondary);
+    display: flex;
+    align-items: center;
+    height: clamp(115px, 8vw, 150px);
+    border-bottom: 1px solid var(--color-primary-light);
+}
+
+@media (max-width: 650px) {
+    .navLinks {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}

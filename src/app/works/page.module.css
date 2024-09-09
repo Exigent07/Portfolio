@@ -1,0 +1,32 @@
+.Works {
+  background-color: var(--color-primary-dark);
+  width: 100vw;
+  display: flex;
+  overflow-x: hidden;
+  position: relative;
+  user-select: none;
+  -moz-user-select: none;
+}
+
+/* Small phones */
+@media (max-width: 599px) {
+
+}
+
+/* landscape phones */
+@media (min-width: 600px) and (max-width: 899px) {
+
+}
+
+/* tablets */
+@media (min-width: 900px) and (max-width: 1199px) {
+
+}
+
+/* desktops */
+@media (min-width: 1200px) {
+}
+
+/* large desktops */
+@media (min-width: 1600px) {
+}

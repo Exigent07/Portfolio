@@ -1,0 +1,86 @@
+.Footer {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7.5vh;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.footerText p {
+    font-family: var(--font-secondary);
+    color: var(--color-primary-light);
+    font-size: clamp(22px, 7vw, 48px);
+    text-align: center;
+}
+
+.gearIcon {
+    position: relative;
+    z-index: 99;
+    filter: blur(1px) drop-shadow(0 0 4px var(--color-primary-light));
+    width: clamp(80px, 10vw, 140px);
+    height: auto;
+    fill: var(--color-primary-light);
+    margin: clamp(10px, 2vw, 20px);
+}
+
+.discordIcon {
+    filter: blur(1px);
+    width: clamp(15px, 5vw, 30px);
+    height: auto;
+    fill: var(--color-primary-light);
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.links h3:first-child {
+    border-top: 1px solid var(--color-primary-light);
+}
+
+.links h3 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    cursor: pointer;
+    display: flex;
+    color: var(--color-primary-light);
+    align-items: center;
+    justify-content: center;
+    width: 450% !important;
+    font-family: var(--font-secondary);
+    display: flex;
+    align-items: center;
+    height: clamp(45px, 10vw, 72px);
+    border-bottom: 1px solid var(--color-primary-light);
+    font-size: clamp(20px, 7vw, 45px);
+}
+
+.cc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cc p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--color-primary-light);
+    padding: 1rem;
+    font-family: var(--font-primary);
+}
+
+.cc p:last-child {
+    cursor: pointer;
+}

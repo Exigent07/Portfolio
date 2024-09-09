@@ -1,0 +1,225 @@
+.About {
+  background-color: var(--color-primary-dark);
+  width: 100vw;
+  display: flex;
+  overflow-x: hidden;
+  position: relative;
+  user-select: none;
+  -moz-user-select: none;
+}
+
+.discord {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-light);
+  font-size: medium;
+  transition: opacity 0.3s ease;
+}
+
+.discord p {
+  opacity: 0;
+  font-family: var(--font-secondary);
+  position: absolute;
+  top: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.section:first-child {
+  margin-top: 15vh;
+}
+
+.subHeading {
+  text-decoration: underline 3px;
+  font-family: var(--font-accent);
+  font-size: clamp(35px, 10vw, 90px); 
+  color: var(--color-primary-light);
+  margin-bottom: 5%;
+}
+
+.paragraph {
+  max-width: 80%;
+  font-family: var(--font-secondary);
+  color: var(--color-primary-light);
+  font-size: clamp(22px, 7vw, 48px);
+  line-height: 1.6;
+  text-align: center;
+}
+
+.skillSubHeading {
+  margin-top: 2.5%;
+}
+
+.skillsList {
+  margin-top: 2%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  font-family: var(--font-primary);
+  font-size: clamp(10px, 8vw, 28px);
+  color: var(--color-primary-light);
+  list-style-type: none;
+  padding: 0;
+  width: 100vw;
+}
+
+.skillsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.bi0s {
+  font-family: var(--font-primary);
+  text-decoration: underline 3px;
+  cursor: pointer;
+}
+
+.skillsList .skillsContainer h3 {
+  position: relative;
+  font-size: clamp(25px, 10vw, 70px); 
+  margin-bottom: 2rem;
+}
+
+.skillTop {
+  border-top: 1px solid var(--color-primary-light) !important;
+}
+
+.skillsList h4 {
+  text-align: center;
+  cursor: pointer;
+  filter: none;
+  transition: filter 0.3s ease-in-out;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  width: clamp(280px, 30vw + 150px, 450px) !important;
+  text-wrap: nowrap;
+  font-family: var(--font-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(75px, 10vw + 50px, 105px);
+  border-bottom: 1px solid var(--color-primary-light);
+  font-size: clamp(25px, 8vw, 55px);
+}
+
+.links {
+  margin-top: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.link {
+  border-top: 1px solid var(--color-primary-light);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  cursor: pointer;
+  display: flex;
+  color: var(--color-primary-light);
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  font-family: var(--font-secondary);
+  display: flex;
+  align-items: center;
+  height: clamp(45px, 10vw, 72px);
+  border-bottom: 1px solid var(--color-primary-light);
+  font-size: clamp(20px, 7vw, 45px);
+}
+
+.iconContainer {
+  margin-top: 5%;
+  display: flex;
+  width: 60%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.icon {
+  filter: blur(0.5px) drop-shadow(0 0 4px var(--color-primary-light));
+  cursor: pointer;
+  font-size: clamp(25px, 8vw, 55px);
+  color: var(--color-primary-light);
+  scale: 1;
+  transition: scale 0.3s ease-in-out;
+}
+
+.icon:hover {
+  scale: 1.1;
+}
+
+/* Small phones */
+@media (max-width: 599px) {
+  .skillsList {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .skillsContainer {
+    margin-top: 25%;
+  }
+}
+
+/* landscape phones */
+@media (min-width: 600px) and (max-width: 899px) {
+  .skillsList {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .skillsContainer {
+    margin-top: 25%;
+  }
+
+  .skillsContainer:first-child {
+    margin-top: 0;
+  }
+}
+
+/* tablets */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .skillsList {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .skillsContainer {
+    margin-top: 25%;
+  }
+
+  .skillsContainer:first-child {
+    margin-top: 0;
+  }
+}
+
+/* desktops */
+@media (min-width: 1200px) {
+}
+
+/* large desktops */
+@media (min-width: 1600px) {
+}
