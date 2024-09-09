@@ -26,6 +26,8 @@ export default function Footer() {
         links = ["Home", "About"];
     } else if (pathname === "/about") {
         links = ["Home", "Works"];
+    } else {
+      links =  ["Home"]
     }
 
     useGSAP(() => {

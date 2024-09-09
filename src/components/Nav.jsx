@@ -27,6 +27,8 @@ export default function Nav() {
         links = ["Home", "About"];
     } else if (pathname === "/about") {
         links = ["Home", "Works"];
+    } else {
+        links = ["Home"]
     }
 
     const handleClickNoHam = (path) => {
