@@ -151,7 +151,7 @@ export default function About() {
             <div className={styles.links}></div>
             <h3 
               className={styles.link}
-              onClick={() => window.open("https://exigent-blog.vercel.app/")}
+              onClick={() => window.open("https://blog.ex1g3n7.xyz/")}
             >
                 <SplitText text="Blog" />
             </h3>
